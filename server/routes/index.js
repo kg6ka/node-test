@@ -1,13 +1,14 @@
 'use strict';
 
 const controllers = require('../controllers');
-// const passport = require('../utils/passportWrapper');
+const passport = require('../utils/passportWrapper');
 
 module.exports = (app) => {
     //static links
-    console.log('routes run');
-    app.get('/', controllers.static.get.index);
+    app.post('/api/users', controllers.auth.create);
     app.get('/api/auth', controllers.auth.getToken);
-    app.post('/api/user', controllers.auth.getUser);
+    app.use(passport.authenticate('bearer', { session: false }));
+    app.get('/', controllers.static.get.index);
+    app.get('/api/user/:id', controllers.auth.getUser);
     app.post('/api/smth', controllers.auth.doSmth);
 };

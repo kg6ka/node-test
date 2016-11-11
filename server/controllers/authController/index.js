@@ -7,5 +7,6 @@ let auth = new AuthController();
 module.exports = {
     getToken: auth.token,
     getUser: auth._getUser,
-    doSmth: auth.smth
+    doSmth: auth.smth,
+    create: auth.create
 };

@@ -19,7 +19,7 @@ app.use(requestHandler);
 app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.raw({limit: '50mb'}));
 
-// app.use(passport.initialize());
+app.use(passport.initialize());
 // app.use(passport.session());
 
 urlManager(app);

@@ -1,0 +1,19 @@
+{
+  "dev": {
+    "host": "localhost",
+    "user": "root",
+    "password": "1234",
+    "database": "auth",
+    "driver": "mysql",
+    "multipleStatements": true
+  },
+  "production": {
+    "host": "localhost",
+    "user": "root",
+    "password": "root",
+    "database": "auth",
+    "driver": "mysql",
+    "multipleStatements": true
+  },
+  "sql-file" : true
+}
